@@ -6,7 +6,7 @@ enum TrainType{ PASSENGER, GOODS };
 class Train
 {
 public:
-	Train();
+	Train(int trainNumber, std::string trainType);
 
 protected:
 	TrainType type_;
