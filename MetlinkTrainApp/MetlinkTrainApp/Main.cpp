@@ -25,9 +25,9 @@ int main()
 	cout << "===============" << endl;
 
 	getTrainType();
-	getTrainType();
-	getTrainType();
-	getTrainType();
+	//getTrainType();
+	//getTrainType();
+	//getTrainType();
 
 	char option;
 
@@ -206,15 +206,28 @@ void getTrainType()
 
 void displayLineInfo(const std::string &line)
 {
-	for (auto p_vec : pVec)
+	cout << pVec.size() << " Test" << endl;
+	cout << pVec[0].getLine() << " Test" << endl;
+
+	for (size_t i = 0; i < pVec.size(); i++)
 	{
-		if (p_vec.getLine() == line)
+		if (pVec[0].getLine() == line)
 		{
-			cout << "Train Number: " << p_vec.getTrainNumber() << "        Platform number: " << p_vec.getPlatformNumber() << endl;
-			cout << p_vec.getStartPlace() << " -> " << p_vec.getEndPlace() << "            " << p_vec.getCycleAllowed() << endl;
-			cout << p_vec.getCategory() << "           " << p_vec.getStatus() << endl;
+			cout << "Train Number: " << pVec[i].getTrainNumber() << "        Platform number: " << pVec[i].getPlatformNumber() << endl;
+			cout << pVec[i].getStartPlace() << " -> " << pVec[i].getEndPlace() << "            " << pVec[i].getCycleAllowed() << endl;
+			cout << pVec[i].getCategory() << "           " << pVec[i].getStatus() << endl;
 		}
 	}
+
+	//for (auto p_vec : pVec)
+	//{
+		//if (p_vec.getLine() == line)
+		//{
+		//	cout << "Train Number: " << p_vec.getTrainNumber() << "        Platform number: " << p_vec.getPlatformNumber() << endl;
+		//	cout << p_vec.getStartPlace() << " -> " << p_vec.getEndPlace() << "            " << p_vec.getCycleAllowed() << endl;
+		//	cout << p_vec.getCategory() << "           " << p_vec.getStatus() << endl;
+		//}
+	//}
 }
 
 void createGoodsTrain(int number, std::string type)
@@ -253,5 +266,3 @@ void createGoodsTrain(int number, std::string type)
 
 	gtVec.push_back(GT);
 }
-
-

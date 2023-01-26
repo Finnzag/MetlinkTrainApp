@@ -2,6 +2,10 @@
 
 void Trip::setLine(std::string line)
 {
+	if (line == "HuttValley") { line_ = Line::HUTTVALLEY; }
+	if (line == "Kapiti") { line_ = Line::KAPITI; }
+	if (line == "Wairarapa") { line_ = Line::WAIRARAPA; }
+	if (line == "Johnsonville") { line_ = Line::JOHNSONVILLE; }
 }
 
 void Trip::setEndPlace(std::string endPlace)
@@ -34,7 +38,10 @@ void Trip::setEndTime(std::string endTime)
 
 std::string Trip::getLine()
 {
-	return std::string();
+	if (line_ == Line::HUTTVALLEY) { return "HuttValley"; }
+	if (line_ == Line::KAPITI) { return "Kapiti"; }
+	if (line_ == Line::WAIRARAPA) { return "Wairarapa"; }
+	if (line_ == Line::JOHNSONVILLE) { return "Johnsonville"; }
 }
 
 std::string Trip::getStartPlace()
