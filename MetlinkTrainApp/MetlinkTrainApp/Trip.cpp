@@ -8,32 +8,39 @@ void Trip::setLine(std::string line)
 	if (line == "Johnsonville") { line_ = Line::JOHNSONVILLE; }
 }
 
-void Trip::setEndPlace(std::string endPlace)
+void Trip::setEndPlace(std::string endPlace_)
 {
+	endPlace = endPlace_;
 }
 
-void Trip::setStartPlace(std::string startPlace)
+void Trip::setStartPlace(std::string startPlace_)
 {
+	startPlace = startPlace_;
 }
 
-void Trip::setDriver(std::string driver)
+void Trip::setDriver(std::string driver_)
 {
+	driver = driver_;
 }
 
-void Trip::setNumberOfCompartments(int numOfCompartments)
+void Trip::setNumberOfCompartments(int numOfCompartments_)
 {
+	numberOfCompartments = numOfCompartments_;
 }
 
-void Trip::setPlatformNumber(int platformNumber)
+void Trip::setPlatformNumber(int platformNumber_)
 {
+	platformNumber = platformNumber_;
 }
 
-void Trip::setStartTime(std::string startTime)
+void Trip::setStartTime(std::string startTime_)
 {
+	startTime = startTime_;
 }
 
-void Trip::setEndTime(std::string endTime)
+void Trip::setEndTime(std::string endTime_)
 {
+	endTime = endTime_;
 }
 
 std::string Trip::getLine()
@@ -46,35 +53,35 @@ std::string Trip::getLine()
 
 std::string Trip::getStartPlace()
 {
-	return std::string();
+	return startPlace;
 }
 
 std::string Trip::getEndPlace()
 {
-	return std::string();
+	return endPlace;
 }
 
 std::string Trip::getDriver()
 {
-	return std::string();
+	return driver;
 }
 
 int Trip::getNumberOfCompartments()
 {
-	return 0;
+	return numberOfCompartments;
 }
 
 int Trip::getPlatformNumber()
 {
-	return 0;
+	return platformNumber;
 }
 
 std::string Trip::getStartTime()
 {
-	return std::string();
+	return startTime;
 }
 
 std::string Trip::getEndTime()
 {
-	return std::string();
+	return endTime;
 }

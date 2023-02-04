@@ -21,14 +21,15 @@ protected:
 
 public:
 
-	void setLine(std::string line);
-	void setEndPlace(std::string endPlace);
-	void setStartPlace(std::string startPlace);
-	void setDriver(std::string driver);
-	void setNumberOfCompartments(int numOfCompartments);
-	void setPlatformNumber(int platformNumber);
-	void setStartTime(std::string startTime);
-	void setEndTime(std::string endTime);
+	// Function Prototypes
+	void setLine(std::string line_);
+	void setEndPlace(std::string endPlace_);
+	void setStartPlace(std::string startPlace_);
+	void setDriver(std::string driver_);
+	void setNumberOfCompartments(int numOfCompartments_);
+	void setPlatformNumber(int platformNumber_);
+	void setStartTime(std::string startTime_);
+	void setEndTime(std::string endTime_);
 
 	std::string getLine();
 	std::string getStartPlace();

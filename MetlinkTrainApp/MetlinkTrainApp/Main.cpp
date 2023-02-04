@@ -8,11 +8,11 @@ using namespace std;
 
 // Function declarations
 void createMenu();
-void createGoodsTrain(int number, std::string type);
-void createPassengerTrain(int number, std::string type);
 void selectPassengerTrain();
 void selectGoodsTrain();
 void getTrainType();
+void createGoodsTrain(int number, std::string type);
+void createPassengerTrain(int number, std::string type);
 void displayLineInfo(const std::string &line);
 
 vector<GoodsTrain> gtVec;
@@ -25,9 +25,9 @@ int main()
 	cout << "===============" << endl;
 
 	getTrainType();
-	//getTrainType();
-	//getTrainType();
-	//getTrainType();
+	getTrainType();
+	getTrainType();
+	getTrainType();
 
 	char option;
 
@@ -206,16 +206,18 @@ void getTrainType()
 
 void displayLineInfo(const std::string &line)
 {
-	cout << pVec.size() << " Test" << endl;
-	cout << pVec[0].getLine() << " Test" << endl;
 
 	for (size_t i = 0; i < pVec.size(); i++)
 	{
 		if (pVec[0].getLine() == line)
 		{
+			cout << "*****" << pVec[i].getLine() << " Line train information*****" << endl;
+			cout << "\n============================================" << endl;
 			cout << "Train Number: " << pVec[i].getTrainNumber() << "        Platform number: " << pVec[i].getPlatformNumber() << endl;
-			cout << pVec[i].getStartPlace() << " -> " << pVec[i].getEndPlace() << "            " << pVec[i].getCycleAllowed() << endl;
-			cout << pVec[i].getCategory() << "           " << pVec[i].getStatus() << endl;
+			cout << pVec[i].getStartPlace() << " -> " << pVec[i].getEndPlace() << endl;
+			cout << "Start Time: " << pVec[i].getStartTime() << "      " << pVec[i].getCycleAllowed() << endl;
+			cout << pVec[i].getCategory() << "      " << pVec[i].getStatus() << endl;
+			cout << "============================================" << endl;
 		}
 	}
 
